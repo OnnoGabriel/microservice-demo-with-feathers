@@ -1,0 +1,4 @@
+{
+  "host": "api-gateway-app.feathersjs.com",
+  "port": "PORT"
+}

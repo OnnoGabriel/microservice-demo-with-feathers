@@ -1,0 +1,67 @@
+version: "3"
+
+services:
+  api-gateway:
+    build: ./api-gateway/
+    ports:
+      - "3030:3031"
+    environment:
+      "HOST": "0.0.0.0"
+    command:
+      "npm run start"
+    networks:
+      - feathers-distributed
+
+  demo-service1:
+    build: ./demo-service/
+    ports:
+      - "3031:3031"
+    environment:
+      "SERVICEID": "Service 1"
+      "HOST": "0.0.0.0"
+    command:
+      "npm run start"
+    networks:
+      - feathers-distributed
+
+  demo-service2:
+    build: ./demo-service/
+    ports:
+      - "3032:3031"
+    environment:
+      "SERVICEID": "Service 2"
+      "HOST": "0.0.0.0"
+    command:
+      "npm run start"
+    networks:
+      - feathers-distributed
+
+  demo-service3:
+    build: ./demo-service/
+    ports:
+      - "3033:3031"
+    environment:
+      "SERVICEID": "Service 3"
+      "HOST": "0.0.0.0"
+    command:
+      "npm run start"
+    networks:
+      - feathers-distributed
+
+  client:
+    build: ./client/
+    volumes:
+      - './client:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    ports:
+      - "8080:8080"
+    environment:
+      "VUE_APP_API_URL": "localhost:3030"
+      "VUE_APP_SERVICE1_URL": "localhost:3031"
+      "VUE_APP_SERVICE2_URL": "localhost:3032"
+      "VUE_APP_SERVICE3_URL": "localhost:3033"
+    command:
+      "npm run dev"
+
+networks:
+    feathers-distributed:
