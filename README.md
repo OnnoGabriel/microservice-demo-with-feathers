@@ -11,9 +11,9 @@ The three services are automatically announced to the gateway via the
 <a href="https://github.com/kalisio/feathers-distributed">feathers-distributed plugin</a>. 
 The plugin also realizes load balancing for the calls of the three microservices through the gateway.
 
-The three microservices provide only one simple test service, which is called <code>demo-service</code>. It has only the <code>GET</code> method implemented and accepts just one parameter. If this parameter is set to a value larger than zero, the service response will be delayed by the parameter value in milliseconds. Use this to simulate e.g. a database call.
+The three microservices provide only one simple test service, which is called <code>demo-service</code>. It has only the <code>GET</code> method implemented and accepts just one parameter. If this parameter is set to a value larger than zero, the service response will be delayed by the parameter value in milliseconds. Use this to simulate e.g. a database call. The services respond with a JSON object, containing the name of the service and the datetime of the call. 
 
-The services respond with a JSON object, containing the name of the service and the datetime of the call. 
+This project is similar to the [example project](https://github.com/kalisio/feathers-distributed/tree/master/example) in feathers-distributed, but runs with Feathers 4.
 
 
 ## Launch
@@ -39,4 +39,6 @@ The screenshot is showing the result of 1000 calls to the service ``demo-service
 
 BTW: The client is a Vue.js app using the [Vuetify](https://vuetifyjs.com/) UI Library.
 
-License: MIT
+## License
+
+Licensed under the MIT license.
