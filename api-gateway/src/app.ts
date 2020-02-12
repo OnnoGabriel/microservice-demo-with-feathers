@@ -49,11 +49,11 @@ app.configure(channels)
 // Set up microservice distribution
 const { authenticate } = require('@feathersjs/authentication').hooks;
 app.configure(distribution({
-  remoteServices: ['demo-service'],
+  remoteServices: ['demo-service'], // publish ony this service
 	hooks: {
     before: {
       all: [
-        authenticate('jwt')
+        authenticate('jwt') // auth required
       ],
     }
   }
