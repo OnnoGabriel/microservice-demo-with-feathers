@@ -28,7 +28,7 @@ This command will start four Feathers apps called ``api-gateway``, ``demo-servic
 
 ## Client 
 
-The client is available under ``localhost:8080``. You can select the endpoint for the API calls, the the number of calls and the delay per call, e.g. for performance testing. The result of the calls is displayed together with the total run time of all calls. 
+The client is available under ``localhost:8080``. You can select the endpoint for the API calls, the number of calls and the delay per call, e.g. for performance testing. The result of the calls is displayed together with the total run time of all calls. 
 
 The API gateway requires authentication. Use the Login button to authenticate with a demo user.
 The three services do *not* require authentication, if called directly.
@@ -37,7 +37,7 @@ The three services do *not* require authentication, if called directly.
 
 The screenshot is showing the result of 1000 calls to the service ``demo-service`` via the API gateway. All calls to the instances of the demo microservice are nicely balanced (1/3 of the 1000 calls).
 
-BTW: The client is a Vue.js app using the [Vuetify](https://vuetifyjs.com/) UI Library.
+BTW: The client is a [Vue.js](https://vuejs.org/) app using the [Vuetify](https://vuetifyjs.com/) UI Library.
 
 ## License
 
