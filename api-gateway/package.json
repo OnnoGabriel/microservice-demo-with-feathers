@@ -61,7 +61,7 @@
     "@types/serve-favicon": "^2.5.0",
     "@types/socket.io-client": "^1.4.32",
     "axios": "^0.21.1",
-    "mocha": "^6.2.3",
+    "mocha": "^10.2.0",
     "nodemon": "^2.0.2",
     "shx": "^0.3.2",
     "ts-mocha": "^6.0.0",
